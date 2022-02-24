@@ -1,0 +1,657 @@
+/*************** CSS Reset commands below: ******************/
+/* The * means "all elements" (a universal selector), so we are setting all elements to have zero margins, and zero padding, thus making them look the same in all browsers. */
+
+*
+{
+  margin: 0;   
+  padding: 0;
+}
+
+
+/********************* CSS VARIABLES ***************************/
+/* Let's understand CSS Variables here: 
+WEBSITE : https://codewithharry.com/videos/web-development-in-hindi-35
+VIDEO: https://www.youtube.com/watch?v=ghlm_94oR90&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg&index=35
+
+1. HTML : For the HTML part, we will make a container and three boxes inside the divs as follows-
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+2. CSS: Let us style the box as follows-
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border: 2px solid red;
+    margin: 2px 9px;
+}
+
+3. VARIABLES: Variables in CSS helps us to assign the same properties to different elements. Suppose we have a property applied to various elements across our website and we wanna change them all at one, then instead of changing them simultaneouly, we can save that property inside a variable and only change that varible value to reflect the change throughout our website.box
+
+SYNTAX FOR USING VARIABLES: 
+.box{
+    --box-color: violet;
+    width:200px;
+    height: 200px;
+    background-color: var(--box-color);
+    border: 2px solid var(--box-color);
+    box-shadow: 3px 3px var(--box-color);
+    margin: 2px 9px;
+}
+
+4. LOCAL VS GLOBAL VARIABLE: The important point to remember about these variables is it can be used within its scope only. To make it work across different scopes, we can write it again and again inside different CSS selectors(Scope), or can use the --root property. To make it understand clearer, we can make a global variable in terms of programming language. Let us understand the code below-
+:root{
+    --primary-color: blue;
+    --danger-color: red;
+}
+
+5. Any custom properties written in the root variable can be accessed anywhere in the code. In most of the cases, we use primary color and danger color as shown in the above example. We have to modify the violet color with the primary color and danger color in the box class as follows-
+.box{
+    width:200px;
+    height: 200px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--danger-color);
+    box-shadow: 3px 3px var(--box-color);
+    margin: 2px 9px;
+} */
+
+
+/****************STYLING THE NAVIGATION BAR*************************/
+#navbar{
+   display: flex;        /*TO bring the list besides the logo img*/
+   align-items: center;  /*To centre the whole list vertically*/
+                         /* justify-content: center; Would have used it agar img+list dono ko centre krna hota horizontally */
+    position: relative;
+    top: 0px;
+    height: 55px;
+}
+
+/**************STYLING THE NAVBAR LOGO + IMAGE INSIDE THAT****************/
+
+#logo{
+    margin: 1px 4px 1px 1px;
+}
+
+#logo img{
+    height: 55px;
+    margin: 1px 1px 1px 20px;
+}
+
+/**************************STYLING THE NAVBAR LIST***********************/
+
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+#navbar ul li{
+  list-style: none; /*To remove that bindu design of the list*/
+    font-size: 1.1rem;
+}
+
+#navbar ul li a{
+    /* List items ko padding dena hai but upar li wale me naa dekr anchor tag ko denge, so that link-texts ke agal bagal bhi agar cursor jaaye to hower effects kaam karein */
+
+    display: block;  /*Display block kiya kyuki padding lagani hai*/
+    padding: 5px 20px;
+    border-radius: 22px;
+    text-decoration: none;
+    color: black;
+}
+
+/*************INSERTING THE TRANSPARENT STRIP IN THE NAVBAR***********/
+
+#navbar::before        /*Jis div ke peeche bg color ya img daalni ho
+'uske::before' is to be used*/
+{
+    content: "";
+    background-color: black;
+    position: absolute;     /*position is used to use z index coz z index works only on positioned element*/
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;    /*z index is used to decide which elemnt lies above the other if two elements are overlapping each other.Jiska z index more, that lies above the other one*/
+    opacity: .5;    /*specified to control the opacity of bg img/color inserted*/
+}
+
+/*************ADDING THE HOVER EFFECTS ON THE LIST ITEMS***********/
+
+#navbar ul li a:hover{
+    color: ivory;
+    background-color: brown;
+}
+
+/*******************STYLING THE HOME SECTION***********************/
+
+#Home{
+  display: flex; 
+  flex-direction: column; 
+  padding: 3px 200px;
+  justify-content: center;
+  align-items: center; 
+  height: 465px;
+}
+
+/*************INSERTING A BG IMG IN HOME SECTION***********/
+
+#Home::before{
+    content: "";
+    background: url(Home_bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 610px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+/************* MAIN HEADING ***********/
+
+#Home h1{
+    font-size: 3.0rem;
+    padding: 20px 10px 12px 10px;
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+
+/************* PARA BELOW THE MAIN HEADING ***********/
+
+#Home p{
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+/******************PADDING IN THE WHOLE PAGE OTHER THAN HOME & FOOTER*******/
+
+#All{
+    padding:1.5%;
+}
+
+
+/*************STYLING THE ORDER BUTTON ***********/
+
+a:link 
+{
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+  
+a:active {
+    text-decoration: none;
+}
+
+.btn{
+    display: inline-block;
+    padding: 6px 20px;
+    border: 2px solid whitesmoke;
+    background-color: brown;
+    color: whitesmoke;
+    margin: 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background:rgb(255,69,0,0.7);
+    transition: .3s linear;
+    z-index: -1;
+}
+  
+.btn:hover::before{
+    width:100%;
+    left: 0;
+}
+
+/******************Background IN THE WHOLE PAGE OTHER THAN HOME & FOOTER*******/
+
+#services-container{
+    background-image: url(section_bg.jpg);
+}
+
+#menu-section{
+    background-image: url(section_bg.jpg);
+}
+
+#app{
+    background-image: url(section_bg.jpg);
+}
+
+
+
+/*************************** Services Section *********************************/
+#services{
+    margin: 14px;
+    display: flex;
+}
+
+/***************************OUR SERVICES**********************************/
+
+.h-primary-center2{
+    font-size: 2.3rem;
+    padding-top: 30px; 
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+/****************BOXES IN THE SERVICE SECTION*******************************/
+
+#services .box1{ 
+    border: 3px solid brown;
+    padding: 15px;
+    margin: 2px 10px;
+    border-radius: 15px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    margin-left: 1px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    flex:1 1 30rem;
+}
+
+#services .box2{ 
+    border: 3px solid brown;
+    padding: 20px;
+    margin: 2px 10px;
+    border-radius: 15px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    flex:1 1 30rem;
+}
+
+#services .box3{ 
+    border: 3px solid brown;
+    padding: 20px;
+    margin: 2px 10px;
+    border-radius: 15px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    margin-right: 1px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    flex:1 1 30rem;
+}
+
+/******************************IMAGES IN ALL THE BOXES***********************/
+
+#services .box1 img{ 
+   height: 160px;
+   margin: auto;        /*margin : auto works only when display is block and height is set, else it won't ig*/
+   display: block;
+   padding-bottom: 10px;
+   border-radius: 15px;
+}
+
+#services .box2 img{ 
+    height: 160px;
+    margin: auto;       
+    display: block;
+    padding-bottom: 10px;
+    border-radius: 15px;
+ }
+
+ #services .box3 img{ 
+    height: 160px;
+    margin: auto;       
+    display: block;
+    padding-bottom: 10px;
+    border-radius: 15px;
+ }
+
+ /******************SERVICES HEADING IN THE BOXES******************************/
+
+.h-secondary-center{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/**************************PARAGRAPH IN THE BOXES********************************/
+
+#services .box1 p{
+    font-family: 'Lora', serif;
+} 
+
+#services .box2 p{
+    font-family: 'Lora', serif;
+} 
+
+#services .box3 p{
+    font-family: 'Lora', serif;
+} 
+
+/***************************MENUS**********************************/
+
+.h-primary-center3{
+    font-size: 2.5rem;
+    padding-top: 150; 
+    padding-bottom: 20px;
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+/****************BOX IN THE MENU SECTION*******************************/
+
+.box4{
+    border: 3px solid brown;
+    padding: 10px;
+    margin: 2px 10px;
+    border-radius: 15px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+/******************************MENU CARD IMAGE***********************/
+
+.Menucard{
+    height: 342px;
+    margin: auto;       
+    display: block;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+/*************EXPLORE MORE BUTTON ***********/
+
+.btn1
+{
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: whitesmoke;
+    margin-left: 350px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+}
+
+.btn1::before
+{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background:rgb(255,69,0,0.7);
+    transition: .3s linear;
+    z-index: -1;
+}
+  
+.btn1:hover::before
+{
+    width:100%;
+    left: 0;
+}
+
+
+
+/*************************** APP Section *********************************/
+.box5{
+    display: flex;
+}
+
+/***************************Get the CRAZY CUISINE App**********************************/
+
+.h-primary-center4{
+    font-size: 1.8rem;
+    padding-top: 40px; 
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    
+}
+
+/****************BOX IN THE APP SECTION*******************************/
+
+.box5{
+    border: 3px solid brown;
+    padding: 10px;
+    margin: 2px 10px;
+    border-radius: 15px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+/******************************PHONE IMAGE***********************/
+
+.phone{
+    height: 350px;
+    padding: 2px;
+    margin-left: 130px;
+}
+
+/*****************************1ST LINE******************************/
+.app_info h3{
+    margin-top: 55px;
+}
+
+/*****************************2ND LINE******************************/
+.app_info p{
+    margin-top: 10px;
+}
+
+/*****************************RADIO BUTTON******************************/
+.radio_button{
+    margin-top: 20px;
+}
+
+/*****************************BOTH SIDE BY SIDE BOXES******************************/
+.two_boxes{
+    display: flex;
+}
+
+.number_box{
+    width: 200px;
+    height: 25px;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 5px;
+    color:#333;
+    text-transform: none;
+    border:.1rem solid rgba(0,0,0,.3);
+    border-radius: .5rem;
+    width:90%;
+}
+
+.share_app_link{
+
+    display: inline-block;
+    padding: 0px 2px;
+    border: 2px solid white;
+    background-color: brown;
+    color: whitesmoke;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    width: 130px;
+    height: 35px;
+}
+
+.share_app_link::before
+{
+    content: '';
+    position: absolute;
+    top:0; right: 0;
+    width:0%;
+    height:100%;
+    background:rgb(255,69,0,0.7);
+    transition: .3s linear;
+    z-index: -1;
+}
+  
+.share_app_link:hover::before
+{
+    width:100%;
+    left: 0;
+}
+
+/*****************************DOWNLOAD APP IMAGES******************************/
+.download{
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+.download-img:hover{
+    cursor: pointer;
+}
+
+/*****************************FOOTER SECTION******************************/
+.footer-content{
+    margin-top: 70px;
+    background: rgb(0,0,0,0.9);
+    color: #f2f2f2;
+    height: auto;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.footer-content hr{
+    width: 100%;
+}
+
+.down{
+    margin-top: 20px;
+}
+
+.p1{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.p2{
+    margin-bottom: 5px;
+}
+
+.p3{
+    margin-bottom: 5px;
+}
+
+.p4{
+    margin-bottom: 5px;
+}
+
+.p5{
+    
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Utility Classes
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+} */

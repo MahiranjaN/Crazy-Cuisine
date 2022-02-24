@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crazy Cuisine-Order Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bree+Serif&family=Lora:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body link="white" vlink="white" alink="white">
+    <!-- /**************NAVBAR***************/ -->
+
+    <nav id="navbar">
+      <div id="logo">
+        <img src="logo.png" height="100px" alt="Apna_Zayka.com" />
+      </div>
+      <ul>
+        <!-- Emmet for below list:  li.item{<a></a>}*7 -->
+
+        <li class="item">
+          <a href="#"><b>Log-in</b></a>
+        </li>
+        <li class="item">
+          <a href="#"><b>Give Feedback</b></a>
+        </li>
+        <li class="item">
+          <a href="#"><b>Go to Cart</b></a>
+        </li>
+        <li class="item">
+          <a href="#"><b>Log-out</b></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- /*******************FOOD ITEMS TO CHOOSE FROM**********************/ -->
+
+    <section class="Foods" id="Foods">
+      <h1 class="heading">
+        Indulge in delicious delights without thinking twice
+      </h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="burger.jpg" alt="" />
+          <h1 class="name">Burger</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 12</h1>
+            <h1 class="price">Price: 130/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+        <div class="box">
+          <img src="pizza.jpg" alt="" />
+          <h1 class="name">Four Cheese Pizza</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 43</h1>
+            <h1 class="price">Price: 400/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+        <div class="box">
+          <img src="momos.jpg" alt="" />
+          <h1 class="name">Chicken Momos</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 33</h1>
+            <h1 class="price">Price: 100/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+        <div class="box">
+          <img src="paneer tikka.jpg" alt="" />
+          <h1 class="name">Paneer Tikka</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 81</h1>
+            <h1 class="price">Price: 150/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+        <div class="box">
+          <img src="sandwich.jpg" alt="" />
+          <h1 class="name">Veg Sandwich</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 13</h1>
+            <h1 class="price">Price: 70/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+        <div class="box">
+          <img src="veg frankie.jpg" alt="" />
+          <h1 class="name">Veg Frankie</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 9</h1>
+            <h1 class="price">Price: 50/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="chocolate cake.jpg" alt="" />
+          <h1 class="name">Chocolate Cake</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 31</h1>
+            <h1 class="price">Price: 300/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="cup cakes.jpg" alt="" />
+          <h1 class="name">Cup Cakes</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 03</h1>
+            <h1 class="price">Price: 100/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="doughnuts.jpg" alt="" />
+          <h1 class="name">Doughnuts</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 100</h1>
+            <h1 class="price">Price: 70/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="honey chilli potato.jpg" alt="" />
+          <h1 class="name">Honey Chilli Potato</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 30</h1>
+            <h1 class="price">Price: 200/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="pan cakes.jfif" alt="" />
+          <h1 class="name">Pan Cakes</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 23</h1>
+            <h1 class="price">Price: 260/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="strawberry.jpg" alt="" />
+          <h1 class="name">Strawberry Mousse</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 71</h1>
+            <h1 class="price">Price: 95/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="paneer butter masala.jpg" alt="" />
+          <h1 class="name">Paneer Butter Masala</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 93</h1>
+            <h1 class="price">Price: 250/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="mushroom.jfif" alt="" />
+          <h1 class="name">Mushroom Do-pyaza</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 100</h1>
+            <h1 class="price">Price: 140/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="mixed veg.jfif" alt="" />
+          <h1 class="name">Mixed Veg</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 76</h1>
+            <h1 class="price">Price: 100/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="corn palak.jfif" alt="" />
+          <h1 class="name">Corn Palak</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 99</h1>
+            <h1 class="price">Price: 120/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="egg curry.jfif" alt="" />
+          <h1 class="name">Egg curry</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 123</h1>
+            <h1 class="price">Price: 300/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="chicken korma.jpg" alt="" />
+          <h1 class="name">Chicken Korma</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 55</h1>
+            <h1 class="price">Price: 490/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="veg biryani.jpg" alt="" />
+          <h1 class="name">Veg Biryani</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 62</h1>
+            <h1 class="price">Price: 380/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="butter naan.jpg" alt="" />
+          <h1 class="name">Butter Naan</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 43</h1>
+            <h1 class="price">Price: 40/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+
+
+
+        <div class="box">
+          <img src="daal makhani.jpg" alt="" />
+          <h1 class="name">Dal Makhani</h1>
+
+          <div class="price_code">
+            <h1 class="code">Code: 66</h1>
+            <h1 class="price">Price: 150/-</h1>
+          </div>
+
+          <div class="order_cart">
+            <a href="#order" class="order_btn">order now</a>
+            <a class="cart_btn">add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- /***********************ORDER NOW FORM***************************/ -->
+      <section class="order" id="order">
+        <h1 class="heading">Order Now!!!</h1>
+
+        <div class="row">
+          <div class="image">
+            <img src="foodorder.jfif" alt="" />
+          </div>
+
+          <form action="">
+            <div class="inputBox">
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Phone Number" />
+              <input type="text" placeholder="Food Code" />
+              <input type="number" placeholder="Quantity" />
+            </div>
+
+            <!-- /**********RADIO  BUTTON*****************/ -->
+
+          <section color="white" type="radio">
+            <section width="100%" class="radio_button">
+              <input type="radio" name="Mode-of-payment" value="COD" class="cod">Cash On Delivery</input>
+              <input type="radio" name="Mode-of-payment" value="OnlineP" class="op">Online Payment</input>
+            </section>
+          </section>
+
+
+            <textarea
+              placeholder="Address"
+              name=""
+              id="address"
+              cols="30"
+              rows="10"
+            ></textarea>
+
+            <a href="#order" class="place_order_btn">Place your Order</a>
+          </form>
+        </div>
+      </section>
+    </section>
+
+<!-- /****************************FOOTER******************************/ -->
+
+<footer>
+      
+    <div class="footer-content">
+      <hr>
+      <p class="p1">Order delicious cuisines on the go, anywhere, anytime. Crazy Cuisine is happy to assist you with your home delivery.</p>
+      <p class="p2">Every time you order, you get hot and fresh dishes delivered at your doorstep.</P>
+      <p class="p3">Hurry up and place your order now!</p>
+
+      
+      <p class="p4">Copyright &copy; Crazy Cuisines India. All rights reserved!</p> 
+      <p class="p5"><u><b>{Designed by Mahi Ranjan}</b></u></p>
+      <hr class="down">
+    </div>
+    
+</footer>
+
+  </body>
+</html>
